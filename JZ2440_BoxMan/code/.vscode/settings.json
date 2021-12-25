@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "s3c24xx.h": "c",
+        "lcdlib.h": "c",
+        "cstdio": "c",
+        "lcddrv.h": "c",
+        "stdio.h": "c",
+        "framebuffer.h": "c",
+        "serial.h": "c",
+        "adc_ts.h": "c"
+    }
+}
