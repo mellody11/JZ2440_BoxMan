@@ -157,11 +157,31 @@ int player_1[2][1] = {{11},{5}};
 int destination_1[2][2] = {{10,13},{7,7}};
 
 // 关卡2 数据保存
-int brick_2[2][28] = {{8,9,10,11,12,8,12,13,8,13,14,15,8,9,15,9,15,9,13,14,15,9,13,9,10,11,12,13},\
+int brick_2[2][23] = {{9,10,11,12,13,9,13,9,11,13,14,9,14,9,14,9,10,11,14,11,12,13,14},\
+                      {2,2,2,2,2,3,3,4,4,4,4,5,5,6,6,7,7,7,7,8,8,8,8}};
+int box_blue_2[2][2] = {{12,12},{4,6}};
+int player_2[2][1] = {{12},{5}};
+int destination_2[2][2] = {{10,10},{4,6}};
+
+// 关卡3 数据保存
+int brick_3[2][20] = {{9,10,11,12,9,12,13,14,9,14,9,14,9,10,14,10,11,12,13,14},{2,2,2,2,3,3,3,3,4,4,5,5,6,6,6,7,7,7,7,7}};
+int box_blue_3[2][2] = {{12,11},{4,5}};
+int player_3[2][1] = {{13},{4}};
+int destination_3[2][2] = {{11,12},{5,5}};
+
+// 关卡4 数据保存
+int brick_4[2][28] = {{9,10,11,12,9,12,9,12,13,14,9,14,9,10,12,14,9,14,9,14,9,12,13,14,9,10,11,12},\
+                      {1,1,1,1,2,2,3,3,3,3,4,4,5,5,5,5,6,6,7,7,8,8,8,8,9,9,9,9}};
+int box_blue_4[2][2] = {{12,11},{4,5}};
+int player_4[2][1] = {{12},{6}};
+int destination_4[2][2] = {{11,13},{5,5}};
+
+// 关卡5 数据保存
+int brick_5[2][28] = {{8,9,10,11,12,8,12,13,8,13,14,15,8,9,15,9,15,9,13,14,15,9,13,9,10,11,12,13},\
                       {1,1,1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6,6,7,7,8,8,8,8,8}};
-int box_blue_2[2][5] = {{11,11,11,10,12},{3,4,5,6,6}};
-int player_2[2][1] = {{13},{5}};
-int destination_2[2][5] = {{11,11,11,11,11},{3,4,5,6,7}};
+int box_blue_5[2][5] = {{11,11,11,10,12},{3,4,5,6,6}};
+int player_5[2][1] = {{13},{5}};
+int destination_5[2][5] = {{11,11,11,11,11},{3,4,5,6,7}};
 
 
 
@@ -218,23 +238,23 @@ void load_data(int n)
         }
         case 2:
         {
-            for(j = 0;j<28;j++)
+            for(j = 0;j<23;j++)
             {
                 brick.locate_arr[0][j] = brick_2[0][j];
                 brick.locate_arr[1][j] = brick_2[1][j];
             }
-            brick.num = 28;
+            brick.num = 23;
             brick.picture = gImage_brick_20_20;
 
-            for(j = 0;j<5;j++)
+            for(j = 0;j<2;j++)
             {
                 box_blue.locate_arr[0][j] = box_blue_2[0][j];
                 box_blue.locate_arr[1][j] = box_blue_2[1][j];
                 destination.locate_arr[0][j] = destination_2[0][j];
                 destination.locate_arr[1][j] = destination_2[1][j];
             }
-            box_blue.num = 5;
-            destination.num = 5;
+            box_blue.num = 2;
+            destination.num = 2;
             box_blue.picture = gImage_box_blue_20_20;
             destination.picture = gImage_destination_20_20;
 
@@ -245,6 +265,94 @@ void load_data(int n)
             
             break;
         }
+        case 3:
+        {
+            for(j = 0;j<20;j++)
+            {
+                brick.locate_arr[0][j] = brick_3[0][j];
+                brick.locate_arr[1][j] = brick_3[1][j];
+            }
+            brick.num = 20;
+            brick.picture = gImage_brick_20_20;
+
+            for(j = 0;j<2;j++)
+            {
+                box_blue.locate_arr[0][j] = box_blue_3[0][j];
+                box_blue.locate_arr[1][j] = box_blue_3[1][j];
+                destination.locate_arr[0][j] = destination_3[0][j];
+                destination.locate_arr[1][j] = destination_3[1][j];
+            }
+            box_blue.num = 2;
+            destination.num = 2;
+            box_blue.picture = gImage_box_blue_20_20;
+            destination.picture = gImage_destination_20_20;
+
+            player.locate_arr[0][0] = player_3[0][0];
+            player.locate_arr[1][0] = player_3[1][0];
+            player.num = 1;
+            player.picture = gImage_player_20_20;
+            
+            break;
+        }
+        case 4:
+        {
+            for(j = 0;j<28;j++)
+            {
+                brick.locate_arr[0][j] = brick_4[0][j];
+                brick.locate_arr[1][j] = brick_4[1][j];
+            }
+            brick.num = 28;
+            brick.picture = gImage_brick_20_20;
+
+            for(j = 0;j<2;j++)
+            {
+                box_blue.locate_arr[0][j] = box_blue_4[0][j];
+                box_blue.locate_arr[1][j] = box_blue_4[1][j];
+                destination.locate_arr[0][j] = destination_4[0][j];
+                destination.locate_arr[1][j] = destination_4[1][j];
+            }
+            box_blue.num = 2;
+            destination.num = 2;
+            box_blue.picture = gImage_box_blue_20_20;
+            destination.picture = gImage_destination_20_20;
+
+            player.locate_arr[0][0] = player_4[0][0];
+            player.locate_arr[1][0] = player_4[1][0];
+            player.num = 1;
+            player.picture = gImage_player_20_20;
+            
+            break;
+        }
+        case 5:
+        {
+            for(j = 0;j<28;j++)
+            {
+                brick.locate_arr[0][j] = brick_5[0][j];
+                brick.locate_arr[1][j] = brick_5[1][j];
+            }
+            brick.num = 28;
+            brick.picture = gImage_brick_20_20;
+
+            for(j = 0;j<5;j++)
+            {
+                box_blue.locate_arr[0][j] = box_blue_5[0][j];
+                box_blue.locate_arr[1][j] = box_blue_5[1][j];
+                destination.locate_arr[0][j] = destination_5[0][j];
+                destination.locate_arr[1][j] = destination_5[1][j];
+            }
+            box_blue.num = 5;
+            destination.num = 5;
+            box_blue.picture = gImage_box_blue_20_20;
+            destination.picture = gImage_destination_20_20;
+
+            player.locate_arr[0][0] = player_5[0][0];
+            player.locate_arr[1][0] = player_5[1][0];
+            player.num = 1;
+            player.picture = gImage_player_20_20;
+            
+            break;
+        }
+
     }
 }
 
@@ -568,7 +676,7 @@ void Lcd_game(void)
     ShowPicture(370,210,50,50,gImage_nextlevel_50_50);
 
     // p为关卡的数目
-    for(p = 0;p<2;p++)
+    for(p = 0;p<5;p++)
     {
         for(i = 0;i<10;i++)
         {
