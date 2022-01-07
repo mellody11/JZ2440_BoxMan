@@ -23,6 +23,9 @@
 4. 触摸屏代码在adc_ts.c文件中，触摸时通过中断实现坐标的读取与映射转换计算（由于电阻屏坐标和lcd坐标范围不同，为方便处理，读取电阻屏坐标后直接映射到lcd坐标范围中）
 5. 触摸屏的中断有些复杂，在这里作简要说明：按下屏幕触发第一次中断，进入坐标自动转换模式，转换完成自动触发第二次中断；第二次中断进行坐标的读取和映射计算；触摸笔离开屏幕后触发第三次中断
 
+## 一些效果图：
+<img src="https://github.com/mellody11/JZ2440_BoxMan/blob/main/1.jpg" width="400px"><img src="https://github.com/mellody11/JZ2440_BoxMan/blob/main/2.jpg" width="400px">
+<img src="https://github.com/mellody11/JZ2440_BoxMan/blob/main/3.jpg" width="400px"><img src="https://github.com/mellody11/JZ2440_BoxMan/blob/main/4.jpg" width="400px">
   
   ***
   未完待续，最后更新时间2022.1.5
